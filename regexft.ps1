@@ -233,6 +233,8 @@ $CheckBox1.width                 = 95
 $CheckBox1.height                = 20
 $CheckBox1.location              = New-Object System.Drawing.Point(348,606)
 $CheckBox1.Font                  = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$CheckBox1.Enabled				 = $false
+$CheckBox1.Visible				 = $false
 
 $CheckBox2                       = New-Object system.Windows.Forms.CheckBox
 $CheckBox2.text                  = "checkBox"
@@ -241,6 +243,8 @@ $CheckBox2.width                 = 95
 $CheckBox2.height                = 20
 $CheckBox2.location              = New-Object System.Drawing.Point(348,626)
 $CheckBox2.Font                  = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$CheckBox2.Enabled				 = $false
+$CheckBox2.Visible				 = $false
 
 $CheckBox3                       = New-Object system.Windows.Forms.CheckBox
 $CheckBox3.text                  = "checkBox"
@@ -249,6 +253,8 @@ $CheckBox3.width                 = 95
 $CheckBox3.height                = 20
 $CheckBox3.location              = New-Object System.Drawing.Point(348,647)
 $CheckBox3.Font                  = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$CheckBox3.Enabled				 = $false
+$CheckBox3.Visible				 = $false
 
 $text_preset_name                = New-Object system.Windows.Forms.TextBox
 $text_preset_name.multiline      = $false
@@ -377,9 +383,10 @@ $label_reg10.Font                = New-Object System.Drawing.Font('Microsoft San
 
 $button_openconfig               = New-Object system.Windows.Forms.Button
 $button_openconfig.text          = "Config Folder"
-$button_openconfig.width         = 94
+$button_openconfig.width         = 117 #94
 $button_openconfig.height        = 30
-$button_openconfig.location      = New-Object System.Drawing.Point(232,607)
+#$button_openconfig.location      = New-Object System.Drawing.Point(232,607)
+$button_openconfig.location      = New-Object System.Drawing.Point(348,604)
 $button_openconfig.Font          = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $mainform.controls.AddRange(@($label_regex,$label_regex_input,$label_description,$label_reg1,$label_reg2,$label_reg3,$label_reg4,$label_reg5,$text_regex1,$text_desc1,$text_regex2,$text_desc2,$text_regex3,$text_desc3,$text_regex4,$text_desc4,$text_desc5,$text_regex5,$multitext_input,$label_input,$multitext_output,$label_output,$multitext_template,$label_template,$button_generate,$button_savepreset,$button_loadpreset,$combobox_presetlist,$CheckBox1,$CheckBox2,$CheckBox3,$text_preset_name,$label_preset,$text_regex6,$text_desc6,$label_reg6,$text_regex7,$text_desc7,$label_reg7,$text_regex8,$label_reg8,$text_desc8,$text_regex9,$label_reg9,$text_desc9,$text_regex10,$text_desc10,$label_reg10,$button_openconfig))
