@@ -3,7 +3,7 @@
  
 
 **How to use the script:**
-1. Paste some kind of input iext into the "Input" textfield.
+1. Paste some kind of input text into the "Input" textfield.
 2. Setup some regex search filter (Additonal regex fields are hidden on the buttom, just make the window bigger)
 3. Build a template in the "Template" textfield that you want to have in the the "Output" textfield. For example:
 ```
