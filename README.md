@@ -24,4 +24,4 @@ Configs are saved in "%appdata%\regexft" and the folder can be accessed with the
 - No function to delete or refresh the config list, so to delete configs you have to delete the config in the config folder and restart the script.
 
 **Future ideas:**
-- Add a checkbox that removes / trims the output, if nothing was found for a regex
+- Add a checkbox that removes / trims the output, if a regex result is empty (No match).
