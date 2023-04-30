@@ -476,6 +476,14 @@ $multitext_input.add_KeyDown({
     }
 })
 
+$multitext_template.add_KeyDown({
+    param($sender, $e)
+    if (($e.KeyCode -eq 'V') -and ($e.Modifiers -eq 'Control')) {
+        $text = [Windows.Forms.Clipboard]::GetText()
+        $multitext_template.SelectedText = $text
+        $e.Handled = $true
+    }
+})
 
 
 
@@ -586,6 +594,9 @@ $button_savepreset.Add_Click({
     SavePresetsToFile
     Write-Host "Presets saved to file."
     PopulateComboBoxWithPresets
+	$combobox_presetlist.SelectedItem = $text_preset_name.text
+	$text_preset_name.text = ""
+	
 })
 
 # Event handler for the Load Preset button
