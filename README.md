@@ -22,3 +22,6 @@ Configs are saved in "%appdata%\regexft" and the folder can be accessed with the
 - The GUI seems to be really broken with high dpi windows settings > 100% (Useable but not nice to look at).
 - Currently it will use the first match on each regex filter that it can find.
 - No function to delete or refresh the config list, so to delete configs you have to delete the config in the config folder and restart the script.
+
+**Future ideas:**
+- Add a checkbox that removes / trims the output, if nothing was found for the a regex
