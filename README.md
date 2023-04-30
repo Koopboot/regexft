@@ -25,3 +25,6 @@ Configs are saved in "%appdata%\regexft" and the folder can be accessed with the
 
 **Future ideas:**
 - Add a checkbox that removes / trims the output, if a regex result is empty (No match).
+
+**Screenshot of the GUI and Example:**
+![example](https://user-images.githubusercontent.com/131690565/235369039-8e798ef6-0310-4d65-b893-602cca5d9952.jpg)
