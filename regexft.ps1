@@ -40,6 +40,14 @@ $label_description.height        = 10
 $label_description.location      = New-Object System.Drawing.Point(309,24)
 $label_description.Font          = New-Object System.Drawing.Font('Microsoft Sans Serif',12,[System.Drawing.FontStyle]([System.Drawing.FontStyle]::Bold))
 
+$label_replace               	 = New-Object system.Windows.Forms.Label
+$label_replace.text          	 = "Replace when Empty"
+$label_replace.AutoSize      	 = $true
+$label_replace.width         	 = 25
+$label_replace.height        	 = 10
+$label_replace.location      	 = New-Object System.Drawing.Point(500,24)
+$label_replace.Font          	 = New-Object System.Drawing.Font('Microsoft Sans Serif',12,[System.Drawing.FontStyle]([System.Drawing.FontStyle]::Bold))
+
 $label_reg1                      = New-Object system.Windows.Forms.Label
 $label_reg1.text                 = "<regex1>"
 $label_reg1.AutoSize             = $true
@@ -381,6 +389,78 @@ $label_reg10.height              = 10
 $label_reg10.location            = New-Object System.Drawing.Point(10,858)
 $label_reg10.Font                = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
+$text_replace1                   = New-Object system.Windows.Forms.TextBox
+$text_replace1.multiline         = $true
+$text_replace1.width             = 158
+$text_replace1.height            = 20
+$text_replace1.location          = New-Object System.Drawing.Point(500,55)
+$text_replace1.Font              = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$text_replace2                   = New-Object system.Windows.Forms.TextBox
+$text_replace2.multiline         = $true
+$text_replace2.width             = 158
+$text_replace2.height            = 20
+$text_replace2.location          = New-Object System.Drawing.Point(500,81)
+$text_replace2.Font              = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$text_replace3                   = New-Object system.Windows.Forms.TextBox
+$text_replace3.multiline         = $true
+$text_replace3.width             = 158
+$text_replace3.height            = 20
+$text_replace3.location          = New-Object System.Drawing.Point(500,110)
+$text_replace3.Font              = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$text_replace4                   = New-Object system.Windows.Forms.TextBox
+$text_replace4.multiline         = $true
+$text_replace4.width             = 158
+$text_replace4.height            = 20
+$text_replace4.location          = New-Object System.Drawing.Point(500,139)
+$text_replace4.Font              = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$text_replace5                   = New-Object system.Windows.Forms.TextBox
+$text_replace5.multiline         = $true
+$text_replace5.width             = 158
+$text_replace5.height            = 20
+$text_replace5.location          = New-Object System.Drawing.Point(500,169)
+$text_replace5.Font              = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+
+$text_replace6                   = New-Object system.Windows.Forms.TextBox
+$text_replace6.multiline         = $true
+$text_replace6.width             = 158
+$text_replace6.height            = 20
+$text_replace6.location          = New-Object System.Drawing.Point(500,732)
+$text_replace6.Font              = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$text_replace7                   = New-Object system.Windows.Forms.TextBox
+$text_replace7.multiline         = $true
+$text_replace7.width             = 158
+$text_replace7.height            = 20
+$text_replace7.location          = New-Object System.Drawing.Point(500,762)
+$text_replace7.Font              = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$text_replace8                   = New-Object system.Windows.Forms.TextBox
+$text_replace8.multiline         = $true
+$text_replace8.width             = 158
+$text_replace8.height            = 20
+$text_replace8.location          = New-Object System.Drawing.Point(500,796)
+$text_replace8.Font              = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+
+$text_replace9                   = New-Object system.Windows.Forms.TextBox
+$text_replace9.multiline         = $true
+$text_replace9.width             = 158
+$text_replace9.height            = 20
+$text_replace9.location          = New-Object System.Drawing.Point(500,825)
+$text_replace9.Font              = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$text_replace10                  = New-Object system.Windows.Forms.TextBox
+$text_replace10.multiline        = $true
+$text_replace10.width            = 158
+$text_replace10.height           = 20
+$text_replace10.location         = New-Object System.Drawing.Point(500,855)
+$text_replace10.Font             = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
 $button_openconfig               = New-Object system.Windows.Forms.Button
 $button_openconfig.text          = "Config Folder"
 $button_openconfig.width         = 117 #94
@@ -389,7 +469,7 @@ $button_openconfig.height        = 30
 $button_openconfig.location      = New-Object System.Drawing.Point(348,604)
 $button_openconfig.Font          = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
-$mainform.controls.AddRange(@($label_regex,$label_regex_input,$label_description,$label_reg1,$label_reg2,$label_reg3,$label_reg4,$label_reg5,$text_regex1,$text_desc1,$text_regex2,$text_desc2,$text_regex3,$text_desc3,$text_regex4,$text_desc4,$text_desc5,$text_regex5,$multitext_input,$label_input,$multitext_output,$label_output,$multitext_template,$label_template,$button_generate,$button_savepreset,$button_loadpreset,$combobox_presetlist,$CheckBox1,$CheckBox2,$CheckBox3,$text_preset_name,$label_preset,$text_regex6,$text_desc6,$label_reg6,$text_regex7,$text_desc7,$label_reg7,$text_regex8,$label_reg8,$text_desc8,$text_regex9,$label_reg9,$text_desc9,$text_regex10,$text_desc10,$label_reg10,$button_openconfig))
+$mainform.controls.AddRange(@($label_regex,$label_regex_input,$label_description,$label_replace,$label_reg1,$label_reg2,$label_reg3,$label_reg4,$label_reg5,$text_regex1,$text_desc1,$text_regex2,$text_desc2,$text_regex3,$text_desc3,$text_regex4,$text_desc4,$text_desc5,$text_regex5,$multitext_input,$label_input,$multitext_output,$label_output,$multitext_template,$label_template,$button_generate,$button_savepreset,$button_loadpreset,$combobox_presetlist,$CheckBox1,$CheckBox2,$CheckBox3,$text_preset_name,$label_preset,$text_regex6,$text_desc6,$label_reg6,$text_regex7,$text_desc7,$label_reg7,$text_regex8,$label_reg8,$text_desc8,$text_regex9,$label_reg9,$text_desc9,$text_regex10,$text_desc10,$label_reg10,$text_replace1,$text_replace2,$text_replace3,$text_replace4,$text_replace5,$text_replace6,$text_replace7,$text_replace8,$text_replace9,$text_replace10,$button_openconfig))
 
 $multitext_input.Add_Enter({  })
 
@@ -445,7 +525,67 @@ $button_Click = {
     $result10 = ApplyRegex $inputText $regex10
 
     # Retrieve the template from the textbox and insert the results from the regex search
-    $outputText = $multitext_template.Text -replace '<regex1>', $result1 -replace '<regex2>', $result2 -replace '<regex3>', $result3 -replace '<regex4>', $result4 -replace '<regex5>', $result5 -replace '<regex6>', $result6 -replace '<regex7>', $result7 -replace '<regex8>', $result8 -replace '<regex9>', $result9 -replace '<regex10>', $result10
+    $outputText = $multitext_template.Text
+
+if ([string]::IsNullOrEmpty($result1) -and ![string]::IsNullOrWhiteSpace($text_replace1.Text)) {
+    $outputText = $outputText -replace '<regex1>', $text_replace1.Text
+} else {
+    $outputText = $outputText -replace '<regex1>', $result1
+}
+
+if ([string]::IsNullOrEmpty($result2) -and ![string]::IsNullOrWhiteSpace($text_replace2.Text)) {
+    $outputText = $outputText -replace '<regex2>', $text_replace2.Text
+} else {
+    $outputText = $outputText -replace '<regex2>', $result2
+}
+
+if ([string]::IsNullOrEmpty($result3) -and ![string]::IsNullOrWhiteSpace($text_replace3.Text)) {
+    $outputText = $outputText -replace '<regex3>', $text_replace3.Text
+} else {
+    $outputText = $outputText -replace '<regex3>', $result3
+}
+
+if ([string]::IsNullOrEmpty($result4) -and ![string]::IsNullOrWhiteSpace($text_replace4.Text)) {
+    $outputText = $outputText -replace '<regex4>', $text_replace4.Text
+} else {
+    $outputText = $outputText -replace '<regex4>', $result4
+}
+
+if ([string]::IsNullOrEmpty($result5) -and ![string]::IsNullOrWhiteSpace($text_replace5.Text)) {
+    $outputText = $outputText -replace '<regex5>', $text_replace5.Text
+} else {
+    $outputText = $outputText -replace '<regex5>', $result5
+}
+
+if ([string]::IsNullOrEmpty($result6) -and ![string]::IsNullOrWhiteSpace($text_replace6.Text)) {
+    $outputText = $outputText -replace '<regex6>', $text_replace6.Text
+} else {
+    $outputText = $outputText -replace '<regex6>', $result6
+}
+
+if ([string]::IsNullOrEmpty($result7) -and ![string]::IsNullOrWhiteSpace($text_replace7.Text)) {
+    $outputText = $outputText -replace '<regex7>', $text_replace7.Text
+} else {
+    $outputText = $outputText -replace '<regex7>', $result7
+}
+
+if ([string]::IsNullOrEmpty($result8) -and ![string]::IsNullOrWhiteSpace($text_replace8.Text)) {
+    $outputText = $outputText -replace '<regex8>', $text_replace8.Text
+} else {
+    $outputText = $outputText -replace '<regex8>', $result8
+}
+
+if ([string]::IsNullOrEmpty($result9) -and ![string]::IsNullOrWhiteSpace($text_replace9.Text)) {
+    $outputText = $outputText -replace '<regex9>', $text_replace9.Text
+} else {
+    $outputText = $outputText -replace '<regex9>', $result9
+}
+
+if ([string]::IsNullOrEmpty($result10) -and ![string]::IsNullOrWhiteSpace($text_replace10.Text)) {
+    $outputText = $outputText -replace '<regex10>', $text_replace10.Text
+} else {
+    $outputText = $outputText -replace '<regex10>', $result10
+}
 
     # Write the result to the output textbox
     $multitext_output.Text = $outputText.TrimEnd()
@@ -467,23 +607,28 @@ $button_openconfig.Add_Click($open_config_folder)
 
 #Add an event handler for the KeyDown event to set the .SelectedText property to the contents of the clipboard when Ctrl+V is pressed, instead of replacing the entire text with the new #text. The cursor remains at the current position, and the new text is inserted at that position.
 
-$multitext_input.add_KeyDown({
-    param($sender, $e)
+function SetSelectedTextFromClipboard($sender, $e) {
     if (($e.KeyCode -eq 'V') -and ($e.Modifiers -eq 'Control')) {
         $text = [Windows.Forms.Clipboard]::GetText()
-        $multitext_input.SelectedText = $text
+        $sender.SelectedText = $text
         $e.Handled = $true
     }
-})
+}
 
-$multitext_template.add_KeyDown({
-    param($sender, $e)
-    if (($e.KeyCode -eq 'V') -and ($e.Modifiers -eq 'Control')) {
-        $text = [Windows.Forms.Clipboard]::GetText()
-        $multitext_template.SelectedText = $text
-        $e.Handled = $true
-    }
-})
+$multitext_input.add_KeyDown({ SetSelectedTextFromClipboard $multitext_input $_ })
+$multitext_template.add_KeyDown({ SetSelectedTextFromClipboard $multitext_template $_ })
+
+$text_replace1.add_KeyDown({ SetSelectedTextFromClipboard $text_replace1 $_ })
+$text_replace2.add_KeyDown({ SetSelectedTextFromClipboard $text_replace2 $_ })
+$text_replace3.add_KeyDown({ SetSelectedTextFromClipboard $text_replace3 $_ })
+$text_replace4.add_KeyDown({ SetSelectedTextFromClipboard $text_replace4 $_ })
+$text_replace5.add_KeyDown({ SetSelectedTextFromClipboard $text_replace5 $_ })
+$text_replace6.add_KeyDown({ SetSelectedTextFromClipboard $text_replace6 $_ })
+$text_replace7.add_KeyDown({ SetSelectedTextFromClipboard $text_replace7 $_ })
+$text_replace8.add_KeyDown({ SetSelectedTextFromClipboard $text_replace8 $_ })
+$text_replace9.add_KeyDown({ SetSelectedTextFromClipboard $text_replace9 $_ })
+$text_replace10.add_KeyDown({ SetSelectedTextFromClipboard $text_replace10 $_ })
+
 
 
 
@@ -493,42 +638,52 @@ function SavePresetsToFile {
         'Regex1' = @{
             'Pattern' = $text_regex1.Text
             'Description' = $text_desc1.Text
+			'Replace' = $text_replace1.Text
         }
         'Regex2' = @{
             'Pattern' = $text_regex2.Text
             'Description' = $text_desc2.Text
+			'Replace' = $text_replace2.Text
         }
         'Regex3' = @{
             'Pattern' = $text_regex3.Text
             'Description' = $text_desc3.Text
+			'Replace' = $text_replace3.Text
         }
         'Regex4' = @{
             'Pattern' = $text_regex4.Text
             'Description' = $text_desc4.Text
+			'Replace' = $text_replace4.Text
         }
         'Regex5' = @{
             'Pattern' = $text_regex5.Text
             'Description' = $text_desc5.Text
+			'Replace' = $text_replace5.Text
         }
         'Regex6' = @{
             'Pattern' = $text_regex6.Text
             'Description' = $text_desc6.Text
+			'Replace' = $text_replace6.Text
         }
         'Regex7' = @{
             'Pattern' = $text_regex7.Text
             'Description' = $text_desc7.Text
+			'Replace' = $text_replace7.Text
         }
         'Regex8' = @{
             'Pattern' = $text_regex8.Text
             'Description' = $text_desc8.Text
+			'Replace' = $text_replace8.Text
         }
         'Regex9' = @{
             'Pattern' = $text_regex9.Text
             'Description' = $text_desc9.Text
+			'Replace' = $text_replace9.Text
         }
         'Regex10' = @{
             'Pattern' = $text_regex10.Text
             'Description' = $text_desc10.Text
+			'Replace' = $text_replace10.Text
         }
         'Template' = $multitext_template.Text
     }
@@ -548,33 +703,43 @@ function LoadPresetsFromFile {
 
     $text_regex1.Text = $presets.Regex1.Pattern
     $text_desc1.Text = $presets.Regex1.Description
+	$text_replace1.Text = $presets.Regex1.Replace
 
     $text_regex2.Text = $presets.Regex2.Pattern
     $text_desc2.Text = $presets.Regex2.Description
+	$text_replace2.Text = $presets.Regex2.Replace
 
     $text_regex3.Text = $presets.Regex3.Pattern
     $text_desc3.Text = $presets.Regex3.Description
+	$text_replace3.Text = $presets.Regex3.Replace
 
     $text_regex4.Text = $presets.Regex4.Pattern
     $text_desc4.Text = $presets.Regex4.Description
+	$text_replace4.Text = $presets.Regex4.Replace
 
     $text_regex5.Text = $presets.Regex5.Pattern
     $text_desc5.Text = $presets.Regex5.Description
+	$text_replace5.Text = $presets.Regex5.Replace
 
     $text_regex6.Text = $presets.Regex6.Pattern
     $text_desc6.Text = $presets.Regex6.Description
+	$text_replace6.Text = $presets.Regex6.Replace
 
     $text_regex7.Text = $presets.Regex7.Pattern
     $text_desc7.Text = $presets.Regex7.Description
+	$text_replace7.Text = $presets.Regex7.Replace
 
     $text_regex8.Text = $presets.Regex8.Pattern
     $text_desc8.Text = $presets.Regex8.Description
+	$text_replace8.Text = $presets.Regex8.Replace
 
     $text_regex9.Text = $presets.Regex9.Pattern
     $text_desc9.Text = $presets.Regex9.Description
+	$text_replace9.Text = $presets.Regex9.Replace
 
     $text_regex10.Text = $presets.Regex10.Pattern
     $text_desc10.Text = $presets.Regex10.Description
+	$text_replace10.Text = $presets.Regex10.Replace
 
     $multitext_template.Text = $presets.Template
 }
