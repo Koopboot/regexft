@@ -213,6 +213,13 @@ $button_generate.height          = 30
 $button_generate.location        = New-Object System.Drawing.Point(348,449)
 $button_generate.Font            = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
+$button_quickgen                 = New-Object system.Windows.Forms.Button
+$button_quickgen.text            = "Quick Gen"
+$button_quickgen.width           = 117
+$button_quickgen.height          = 30
+$button_quickgen.location        = New-Object System.Drawing.Point(236,449)
+$button_quickgen.Font            = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
 $button_savepreset               = New-Object system.Windows.Forms.Button
 $button_savepreset.text          = "Save Preset"
 $button_savepreset.width         = 117
@@ -221,7 +228,7 @@ $button_savepreset.location      = New-Object System.Drawing.Point(348,522)
 $button_savepreset.Font          = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $button_loadpreset               = New-Object system.Windows.Forms.Button
-$button_loadpreset.text          = "Load Preset"
+$button_loadpreset.text          = "Reload Presets"
 $button_loadpreset.width         = 117
 $button_loadpreset.height        = 30
 $button_loadpreset.location      = New-Object System.Drawing.Point(348,563)
@@ -469,7 +476,7 @@ $button_openconfig.height        = 30
 $button_openconfig.location      = New-Object System.Drawing.Point(348,604)
 $button_openconfig.Font          = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
-$mainform.controls.AddRange(@($label_regex,$label_regex_input,$label_description,$label_replace,$label_reg1,$label_reg2,$label_reg3,$label_reg4,$label_reg5,$text_regex1,$text_desc1,$text_regex2,$text_desc2,$text_regex3,$text_desc3,$text_regex4,$text_desc4,$text_desc5,$text_regex5,$multitext_input,$label_input,$multitext_output,$label_output,$multitext_template,$label_template,$button_generate,$button_savepreset,$button_loadpreset,$combobox_presetlist,$CheckBox1,$CheckBox2,$CheckBox3,$text_preset_name,$label_preset,$text_regex6,$text_desc6,$label_reg6,$text_regex7,$text_desc7,$label_reg7,$text_regex8,$label_reg8,$text_desc8,$text_regex9,$label_reg9,$text_desc9,$text_regex10,$text_desc10,$label_reg10,$text_replace1,$text_replace2,$text_replace3,$text_replace4,$text_replace5,$text_replace6,$text_replace7,$text_replace8,$text_replace9,$text_replace10,$button_openconfig))
+$mainform.controls.AddRange(@($label_regex,$label_regex_input,$label_description,$label_replace,$label_reg1,$label_reg2,$label_reg3,$label_reg4,$label_reg5,$text_regex1,$text_desc1,$text_regex2,$text_desc2,$text_regex3,$text_desc3,$text_regex4,$text_desc4,$text_desc5,$text_regex5,$multitext_input,$label_input,$multitext_output,$label_output,$multitext_template,$label_template,$button_generate,$button_savepreset,$button_loadpreset,$combobox_presetlist,$CheckBox1,$CheckBox2,$CheckBox3,$text_preset_name,$label_preset,$text_regex6,$text_desc6,$label_reg6,$text_regex7,$text_desc7,$label_reg7,$text_regex8,$label_reg8,$text_desc8,$text_regex9,$label_reg9,$text_desc9,$text_regex10,$text_desc10,$label_reg10,$text_replace1,$text_replace2,$text_replace3,$text_replace4,$text_replace5,$text_replace6,$text_replace7,$text_replace8,$text_replace9,$text_replace10,$button_openconfig,$button_quickgen))
 
 $multitext_input.Add_Enter({  })
 
@@ -494,8 +501,22 @@ function ApplyRegex($text, $regex) {
     }
 }
 
-
-# Event handler for the button click
+$quickgenerate ={
+	
+	#Copy text from clipboard into input textfield
+	$multitext_input.Text = [System.Windows.Forms.Clipboard]::GetText()
+	
+	#Generate Button
+	$button_generate.PerformClick()
+	
+	# Get the output text into your clipboard
+	if (-not [string]::IsNullOrWhiteSpace($multitext_output.Text)) {
+	[System.Windows.Forms.Clipboard]::SetText($multitext_output.Text)
+	} else {
+		Write-Host "Output is empty. Check your input or your regex."
+    }
+}
+# Event handler for the button click / Generate Button
 $button_Click = {
     # Retrieve the Regex search parameters from the textboxes
     $regex1 = $text_regex1.Text
@@ -599,7 +620,7 @@ Invoke-Item $configPath
 # Add the button click event handler to the buttons
 $button_generate.Add_Click($button_Click)
 $button_openconfig.Add_Click($open_config_folder)
-
+$button_quickgen.Add_Click($quickgenerate)
 
 
 
@@ -766,8 +787,10 @@ $button_savepreset.Add_Click({
 
 # Event handler for the Load Preset button
 $button_loadpreset.Add_Click({
-    LoadPresetsFromFile
-    Write-Host "Presets loaded from file."
+    #LoadPresetsFromFile
+    #Write-Host "Presets loaded from file."
+	PopulateComboBoxWithPresets
+	Write-Host "Presets reloaded"
 })
 
 # Event handler for the combobox selection change
